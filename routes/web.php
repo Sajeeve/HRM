@@ -16,5 +16,9 @@
 // });
 
 Route::get('/', function () {
-    return view('templates.home');
+    return view('templates.home',['name' => 'iKITS']);
+});
+
+Route::get('/about', function () {
+    return view('templates.about');
 });
