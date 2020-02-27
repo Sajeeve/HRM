@@ -15,10 +15,5 @@
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('templates.home',['name' => 'iKITS']);
-});
-
-Route::get('/about', function () {
-    return view('templates.about');
-});
+Route::get('/','HomeController@home');
+Route::get('/about','HomeController@about');

@@ -4,9 +4,18 @@
 @section('content')
 <div class="jumbotron">
   <h1 class="display-4">Welcome to {{$name}}</h1>
-  <p class="lead">This is an IT company</p>
+  <p class="lead">{{$tagline}}</p>
   <hr class="my-4">
-  <p>We provide web and app development services</p>
+  
+  @if ( $hour > "00" ) 
+    <p> Good Morning ... </p>
+    @elseif ( $hour >"12" ) 
+    <p> Good Afternoon ... </p>
+    @elseif ( $hour >"15" ) 
+    <p> Good Evening ... </p>
+    @elseif ( $hour >"19" ) 
+    <p> Good Night ... </p>
+  @endif
 </div>
 
 <!-- cards -->
